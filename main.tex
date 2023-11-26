@@ -1,0 +1,146 @@
+\documentclass[a4paper,12pt, oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{gensymb}
+\usepackage{makecell}
+\usepackage{indentfirst}
+\usepackage{bigints}
+\usepackage{esint}
+\usepackage{harpoon}
+\usepackage{relsize}
+\usepackage{CJKutf8}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{chemformula}
+\usepackage{multicol}
+\usepackage[colorlinks = true,linkcolor = blue,hypertexnames = true]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    allcolors=blue	
+}
+\usepackage[super,square]{natbib}
+
+
+\geometry{a4paper, scale = 0.825}
+\pagestyle{fancy}
+\fancyhead[R]{\textsc{Subject Name}}
+\fancyhead[L]{\textsc{Report Name}}
+\fancyfoot[C]{\thepage}
+
+\setlength{\parindent}{2em}
+\setlength{\headheight}{27.05002pt}
+\addtolength{\topmargin}{-15.05002pt}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+% \renewcommand\thesection{\arabic {section}}
+\renewcommand\thesection{\Roman{section}}
+\renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\Roman{subsubsection}}
+\newcommand{\HRule}{\rule{\linewidth}{2pt}}
+\newcommand{\cald}{{\rm d}}
+\DeclareSIUnit\torr{torr}
+\DeclareSIUnit\min{min}
+\DeclareSIUnit\liter{L}
+
+%Package and definition for code demo
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=single,
+language=Python,
+aboveskip=3mm,
+belowskip=3mm,
+showstringspaces=false,
+columns=flexible,
+basicstyle={\small\ttfamily},
+numbers=left,
+numberstyle=\tiny\color{gray},
+keywordstyle=\color{blue},
+commentstyle=\color{dkgreen},
+stringstyle=\color{mauve},
+breaklines=true,
+breakatwhitespace=true,
+tabsize=4}
+
+% \begin{enumerate} [label = (\alph*)]
+% \begin{enumerate} [label = (\roman*)]
+
+\begin{document}
+
+%---------------------------Titlepage---------------------------
+\begin{CJK}{UTF8}{bkai}
+
+\begin{titlepage}
+
+\begin{center}
+
+% Upper part of the page
+\includegraphics[width = 0.15\textwidth]{logo.pdf} \\ [1cm]
+\textsc{\LARGE National Taiwan University} \\ [1.5cm]
+\textsc{\Large Subject Name } \\ [0.5cm]
+
+
+% Title
+\HRule \\ [0.5cm]
+{ \huge \bfseries Report Name} \\ [0.5cm]
+\HRule \\ [2.5cm]
+
+% Author and supervisor
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author :}\\
+Your \textsc{Name}
+\end{flushleft}
+\end{minipage}
+%
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Lecturer :} \\
+Dr.Lecturer~\textsc{Name}\\
+\end{flushright}
+\end{minipage}
+
+
+\vfill
+% Bottom of the page
+% {\large \today} \\
+{\large December 4, 2023}
+
+\end{center}
+
+\end{titlepage}
+\setcounter{page}{1}
+%---------------------------Body---------------------------
+
+% \begin{enumerate} [label = (\alph*)]
+% \begin{enumerate} [label = (\roman*)]
+\section{Principle}
+\subsection{Instrument \& Methodology}
+\subsection{Experiment Records}
+\section{Results}
+\section{Data Analysis}
+\subsection{Propagation of Uncertainty}
+\subsection{Error Analysis}
+\section{Discussion}
+\section{Conclusion}
+\newpage
+
+\bibliographystyle{unsrt}
+\bibliography{./bibliography.bib}
+
+\end{CJK}
+\end{document}
